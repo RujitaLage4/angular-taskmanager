@@ -1,0 +1,32 @@
+<div class="centered-content" *ngIf="!ShowCreateList">
+  <div class="task-manager-container">
+    <div>
+      <div class="task-list-container">
+        <h5 class="title">Tasks</h5>
+        <div class="list-menu-container">
+          <div class="list-menu" *ngFor="let task of tasks">
+            <p>{{ task.title }}</p>
+
+            <div class="buttons">
+              <button class="edit-btn" (click)="OnClickEdit(task)">Edit</button>
+
+              <button class="delete-btn" (click)="OnDelete(task.id)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="plus-btn" type="submit" (click)="ShowList($event)">
+        +
+      </button>
+    </div>
+  </div>
+</div>
+<app-create-form
+  *ngIf="ShowCreateList"
+  [EditMode]="editmode"
+  (taskCreated)="addTask($event)"
+  [task]="currentTask"
+>
+</app-create-form>

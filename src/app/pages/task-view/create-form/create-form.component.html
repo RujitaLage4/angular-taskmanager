@@ -1,0 +1,20 @@
+<div class="list-info">
+  <p class="list">{{ EditMode ? "EDIT A TASK" : "CREATE A TASK" }}</p>
+  <div class="input-container">
+    <input
+      type="createlist"
+      [(ngModel)]="taskName"
+      id="inputPassword5"
+      placeholder="Enter "
+      aria-describedby="passwordHelpBlock"
+    />
+  </div>
+  <div class="list-button">
+    <button type="button" class="btn btn-light cancel-btn" (click)="OnCancel()">
+      Cancel
+    </button>
+    <button type="button" class="btn btn-dark" (click)="createdTask()">
+      {{ EditMode ? "Save" : "Create" }}
+    </button>
+  </div>
+</div>

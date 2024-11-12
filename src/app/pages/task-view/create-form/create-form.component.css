@@ -1,0 +1,31 @@
+.list-info {
+  background-color: white;
+  height: 150px;
+  width: 300px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.list-button {
+  position: relative;
+  left: 62px;
+  top: 12px;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container input {
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.cancel-btn {
+  margin-right: 5px;
+}
